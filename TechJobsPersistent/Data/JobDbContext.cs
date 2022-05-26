@@ -5,6 +5,9 @@ namespace TechJobsPersistent.Data
 {
     public class JobDbContext : DbContext
     {
+        private JobDbContext context;
+
+
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Employer> Employers { get; set; }
         public DbSet<Skill> Skills { get; set; }
