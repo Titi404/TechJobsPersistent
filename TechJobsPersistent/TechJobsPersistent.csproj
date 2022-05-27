@@ -7,6 +7,7 @@
 
 
   <ItemGroup>
+    <Folder Include="Migrations\" />
     <Folder Include="Views\Employer\" />
     <Folder Include="Views\List\" />
     <Folder Include="Views\Search\" />
