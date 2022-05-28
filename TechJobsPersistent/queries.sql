@@ -9,3 +9,10 @@
 
 --Part 3
 
+SELECT * FROM skills ORDER BY Name ASC;
+
+Select *
+FROM skills
+LEFT JOIN Jobskills on skills.id = jobskills.skillid
+WHERE JobSkills.JobId IS NOT NULL
+ORDER BY Name ASC;

@@ -7,11 +7,14 @@ namespace TechJobsPersistent.Data
     {
         private JobDbContext context;
 
-
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Employer> Employers { get; set; }
         public DbSet<Skill> Skills { get; set; }
         public DbSet<JobSkill> JobSkills { get; set; }
+
+        //public DbSet<JobTag> JobTags { get; set; }
+        //public DbSet<Tag> Tags { get; set; }
+
 
         public JobDbContext(DbContextOptions<JobDbContext> options)
             : base(options)
@@ -21,6 +24,7 @@ namespace TechJobsPersistent.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<JobSkill>()
+            //modelBuilder.Entity<JobTag>()
                 .HasKey(j => new { j.JobId, j.SkillId });
         }
     }

@@ -63,7 +63,7 @@ namespace TechJobsPersistent.Controllers
                 return Redirect("/employer");
 
             }
-            return View();
+            return View("Add", addEmployerViewModel);
         }
 
         public IActionResult About(int id)
